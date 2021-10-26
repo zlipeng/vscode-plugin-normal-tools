@@ -63,7 +63,7 @@ export class MyProvider implements TreeDataProvider<MyItem> {
       {
         label: "新冠",
         id: 'covid',
-        description: 'covid',
+        description: 'covid-19',
         command: {
           command: 'covid-vscode.start',
           title: 'covid'

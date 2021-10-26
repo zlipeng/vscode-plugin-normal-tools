@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 		panel.webview.html = getWebviewContentCovid();
 	});
 
-	vscode.window.createTreeView('exporler', {
+	vscode.window.createTreeView('list', {
 		treeDataProvider: new MyProvider()
 	});
 

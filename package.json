@@ -2,7 +2,7 @@
 	"name": "vscode-plugin-normal-tools",
 	"displayName": "vscode-plugin-normal-tools",
 	"description": "微博、新冠地图",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
@@ -19,17 +19,17 @@
 		"viewsContainers": {
 			"activitybar": [
         {
-          "id": "my-exporler",
-          "title": "浏览",
+          "id": "my-tree-view",
+          "title": "列表",
 					"icon": "public/icon-light.png"
         }
       ]
 		},
 		"views": {
-			"my-exporler": [
+			"my-tree-view": [
 				{
-					"id": "exporler",
-					"name": "exporler"
+					"id": "list",
+					"name": "列表"
 				}
 			]
 		}
