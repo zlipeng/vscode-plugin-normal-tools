@@ -2,7 +2,7 @@
 	"name": "vscode-plugin-normal-tools",
 	"displayName": "vscode-plugin-normal-tools",
 	"description": "微博、新冠地图",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
