@@ -20,10 +20,10 @@ export const getWebviewContentCovid = () => {
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>微博</title>
+      <title>新冠</title>
   </head>
   <body>
-    <iframe id="wb-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="width: 375px; height: 100vh; border: none;" src="https://news.qq.com/zt2020/page/feiyan.htm#/">
+    <iframe id="covid-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="width: 375px; height: 100vh; border: none;" src="https://news.qq.com/zt2020/page/feiyan.htm#/">
 
     </iframe>
   </body>
