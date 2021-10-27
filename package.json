@@ -2,7 +2,7 @@
 	"name": "vscode-plugin-normal-tools",
 	"displayName": "vscode-plugin-normal-tools",
 	"description": "微博、新冠地图",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
@@ -18,12 +18,12 @@
 	"contributes": {
 		"viewsContainers": {
 			"activitybar": [
-        {
-          "id": "my-tree-view",
-          "title": "列表",
+				{
+					"id": "my-tree-view",
+					"title": "列表",
 					"icon": "public/icon-light.png"
-        }
-      ]
+				}
+			]
 		},
 		"views": {
 			"my-tree-view": [
@@ -62,7 +62,7 @@
 		"@vscode/test-electron": "^1.6.2"
 	},
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/zlipeng/vscode-plugin-normal-tools.git"
-  }
+		"type": "git",
+		"url": "https://github.com/zlipeng/vscode-plugin-normal-tools.git"
+	}
 }
