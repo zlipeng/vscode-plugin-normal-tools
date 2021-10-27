@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	vscode.window.createTreeView('list', {
-		treeDataProvider: new MyProvider()
+		treeDataProvider: new MyProvider(context)
 	});
 
 	context.subscriptions.push();

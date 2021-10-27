@@ -27,7 +27,7 @@ class MyItem {
 
   contextValue? = '';
 
-  icon? = '';
+  iconPath?: any;
 
   children?: MyItem[] = [];
 
@@ -41,8 +41,10 @@ class MyTreeItem extends MyItem {
 }
 
 export class MyProvider implements TreeDataProvider<MyItem> {
-  constructor() {
+  private readonly extensionContext: ExtensionContext;
 
+  constructor(context: ExtensionContext) {
+    this.extensionContext = context;
   }
 
   public getTreeItem(p: MyItem): MyTreeItem {
@@ -58,7 +60,8 @@ export class MyProvider implements TreeDataProvider<MyItem> {
         command: {
           command: 'weibo-vscode.start',
           title: "weibo"
-        }
+        },
+        iconPath: Uri.file(this.extensionContext.asAbsolutePath('public/wb.png'))
       },
       {
         label: "新冠",
@@ -68,6 +71,7 @@ export class MyProvider implements TreeDataProvider<MyItem> {
           command: 'covid-vscode.start',
           title: 'covid'
         },
+        iconPath: Uri.file(this.extensionContext.asAbsolutePath('public/covid.png'))
       }
     ];
     return timerItems;
