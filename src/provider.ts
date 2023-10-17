@@ -1,15 +1,10 @@
 import {
+  Command,
+  ExtensionContext,
   TreeDataProvider,
-  TreeItem,
   // commands,
   TreeItemCollapsibleState,
-  EventEmitter,
-  Event,
-  TreeView,
-  window,
-  Uri,
-  ExtensionContext,
-  Command,
+  Uri
 } from 'vscode';
 
 const timerCollapsedStateMap: {[key: string]: TreeItemCollapsibleState} = {};
@@ -61,18 +56,17 @@ export class MyProvider implements TreeDataProvider<MyItem> {
           command: 'weibo-vscode.start',
           title: "weibo"
         },
-        iconPath: Uri.file(this.extensionContext.asAbsolutePath('public/wb.png'))
+        iconPath: Uri.file(this.extensionContext.asAbsolutePath('public/wb.png')),
       },
       {
-        label: "新冠",
-        id: 'covid',
-        description: 'covid-19',
+        label: "掘金",
+        id: 'juejin',
+        description: 'juejin',
         command: {
-          command: 'covid-vscode.start',
-          title: 'covid'
+          command: 'juejin-vscode.start',
+          title: 'juejin'
         },
-        iconPath: Uri.file(this.extensionContext.asAbsolutePath('public/covid.png'))
-      }
+      },
     ];
     return timerItems;
   }

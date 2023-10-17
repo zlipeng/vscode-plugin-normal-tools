@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { getWebviewContent, getWebviewContentCovid } from './content';
+import { getWebviewContent, getWebviewContentJuejin } from './content';
 import { MyProvider } from './provider';
 
 // this method is called when your extension is activated
@@ -26,19 +26,19 @@ export function activate(context: vscode.ExtensionContext) {
 		panel.webview.html = getWebviewContent();
 	});
 
-	vscode.commands.registerCommand('covid-vscode.start', () => {
+	vscode.commands.registerCommand('juejin-vscode.start', () => {
 		const panel = vscode.window.createWebviewPanel(
-			'covid', // Identifies the type of the webview. Used internally
-			'新冠', // Title of the panel displayed to the user
+			'juejin', // Identifies the type of the webview. Used internally
+			'掘金', // Title of the panel displayed to the user
 			vscode.ViewColumn.One, // Editor column to show the new webview panel in.
 			{
 				enableScripts: true,
 				retainContextWhenHidden: true
-			}
+			} // Webview options. More on these later.
 		);
 
-		panel.webview.html = getWebviewContentCovid();
-	});
+		panel.webview.html = getWebviewContentJuejin();
+	})
 
 	vscode.window.createTreeView('list', {
 		treeDataProvider: new MyProvider(context)

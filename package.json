@@ -1,8 +1,8 @@
 {
 	"name": "vscode-plugin-normal-tools",
 	"displayName": "vscode-plugin-normal-tools",
-	"description": "微博、新冠地图",
-	"version": "0.0.4",
+	"description": "微博等",
+	"version": "0.0.5",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
@@ -20,7 +20,7 @@
 			"activitybar": [
 				{
 					"id": "my-tree-view",
-					"title": "列表",
+					"title": "各类web列表",
 					"icon": "public/icon-light.png"
 				}
 			]
